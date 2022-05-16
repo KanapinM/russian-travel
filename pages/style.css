@@ -4,52 +4,6 @@
 
 @import url(../blocks/page/page.css);
 
-.page {
-    background-color: #2A2C2F;
-    color: white;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
-    -moz-text-size-adjust: 100%;
-    text-rendering: optimizeLegibility;
-}
-
-.header {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 48px;
-}
-
-.header__lang {
-    margin-top: 46px;
-}
-
-.header__lang-link {
-    margin-right: 18px;
-    color: white;
-    font-family: 'Inter', Arial, sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 28px;
-    /* identical to box height, or 117% */
-    transition: ease-in-out 0.3s;
-}
-
-.header__lang-link:hover {
-    opacity: 0.8;
-}
-
-.header__lang-link:last-child {
-    margin-right: 0;
-    text-decoration: none;
-}
-
-.header__logo {
-    margin-top: 28px;
-}
-
 .lead {
     padding-top: 56px;
 }
@@ -122,17 +76,21 @@
 
 .intro__list {
     margin: 0 auto;
-
+    padding: 0;
 }
 
 .intro__specs {
     list-style: none;
     font-family: 'Inter', Arial, sans-serif;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 400;
     font-size: 12px;
     line-height: 18px;
     /* or 150% */
+}
+
+.intro__specs-span {
+    font-weight: 700;
 }
 
 .photo-grid {
@@ -154,6 +112,7 @@
 }
 
 .places {
+    padding-bottom: 92px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -252,29 +211,24 @@
 }
 
 .cover {
-    margin: 0 48px;
-    min-height: 65vw;
-    background-size: 100%;
+    background-size: contain;
+    background-position: center;
     background-repeat: no-repeat;
+    min-height: 740px;
+    background-image: url(../sprint-3-images/cover-trains.jpg);
 }
 
-.cover__link::before {
-    position: absolute;
-    z-index: -1;
-    background: #2A2C2F;
-    opacity: 0.3;
-}
+.cover__link::before {}
 
 .cover__link {
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    position: relative;
-    z-index: 1;
-    background-size: cover;
+    background: #2A2C2F;
     min-height: 740px;
-    flex-direction: column;
-    background-image: url(../sprint-3-images/cover-trains.jpg);
+    width: calc(100% - 7.5%);
+    opacity: 0.3;
     color: white;
     text-decoration: none;
     transition: ease-in-out 0.3s;
@@ -310,7 +264,7 @@
 }
 
 .footer {
-    padding-bottom: 24px;
+    padding: 92px 0 24px;
     display: flex;
     justify-content: space-between;
     margin: 0 48px;
@@ -351,36 +305,61 @@
     .lead {
         padding-top: 48px;
     }
+
     .lead__image {
         max-width: calc(100% - 96px);
     }
+
     .lead__subtitle {
         margin: 32px auto 56px;
     }
+
     .lead__caption {
         margin: 8px auto 0 48px;
     }
+
     .intro {
         margin-left: 48px;
     }
+
     .photo-grid {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(4, 1fr);
         gap: 14px;
     }
+
+    .places {
+        padding-bottom: 92px;
+    }
+
     .place {
         column-gap: 32px;
     }
+
     .place__title {
         max-width: 440px;
     }
+
     .place__paragraphs {
         max-width: 456px;
     }
+
     .place__image {
         max-width: 440px;
     }
 
+    .cover {
+        min-height: 640px;
+    }
+
+    .cover__link {
+        min-height: 640px;
+        width: 100%;
+    }
+
+    .footer {
+        padding-top: 92px;
+    }
 
 }
 
@@ -388,14 +367,17 @@
     .lead__image {
         max-width: 100%;
     }
+
     .lead__caption {
         margin: 8px auto 0 24px;
     }
+
     .intro {
         margin-left: 24px;
         padding-top: 88px;
         max-width: 720px;
     }
+
     .photo-grid {
         margin: 0 24px;
         padding: 88px 0;
@@ -403,31 +385,50 @@
         grid-template-rows: repeat(6, 1fr);
         gap: 16px;
     }
+
     .place {
         margin: 0 auto 73px;
         column-gap: 28px;
     }
+
     .places {
         padding-bottom: 88px;
     }
+
     .place__title {
         max-width: 340px;
         font-size: 42px;
         line-height: 46px;
     }
+
     .place__url-heading {
         line-height: 12px;
     }
+
     .place__paragraphs {
         max-width: 352px;
     }
+
     .place__paragraph {
+        margin: 0 auto 25px;
         font-size: 16px;
     }
+
     .place__image {
         max-width: 340px;
     }
 
+    .cover {
+        min-height: 480px;
+    }
+
+    .cover__link {
+        min-height: 480px;
+    }
+
+    .footer {
+        padding-top: 88px;
+    }
 
 }
 
@@ -435,85 +436,172 @@
     .header {
         margin: 0 16px;
     }
+
     .header__lang {
         margin-top: 30px;
     }
+
     .header__lang-link {
         font-size: 18px;
         line-height: 20px;
     }
+
     .header__logo {
         margin-top: 16px;
         max-width: 142px;
     }
+
     .lead {
         padding-top: 48px;
     }
+
     .lead__title {
         max-width: 288px;
         font-size: 40px;
         line-height: 44px;
     }
+
     .lead__subtitle {
         margin: 16px auto 40px;
         max-width: 288px;
         font-size: 16px;
         line-height: 20px;
     }
+
     .lead__image {
         margin: 0 auto;
         max-width: 100%;
     }
+
     .lead__caption {
         margin: 8px auto 0 16px;
     }
+
     .intro {
         margin-left: 16px;
         padding-top: 64px;
         max-width: 288px;
     }
+
     .intro__title {
         font-size: 32px;
         line-height: 35px;
     }
+
     .intro__text {
         margin: 40px 0 33px;
     }
+
     .photo-grid {
         padding: 64px 0;
         margin: 0 16px;
         grid-template-columns: 1fr;
         gap: 12px;
     }
+
+    .places {
+        padding-bottom: 64px;
+    }
+
     .place {
-        max-width: 320px;
+        margin-bottom: 50px;
+        display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
+        gap: 32;
+        grid-template-areas:
+            "title"
+            "website"
+            "image"
+            "paragraphs";
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
     }
+
     .place__title {
+        margin: auto;
+        width: 288px;
         max-width: 288px;
         font-size: 32px;
         line-height: 35px;
     }
+
+    .place__website {
+        margin: auto;
+        width: 288px;
+    }
+
     .place__url-heading {
-        margin: 32 auto 12px;
         max-width: 288px;
         font-size: 12px;
         line-height: 12px;
     }
+
     .place__link {
         font-size: 18px;
         line-height: 22px;
     }
+
     .place__image {
         max-width: 320px;
     }
+
     .place__paragraphs {
+        margin: 0 auto 0;
         max-width: 288px;
     }
+
     .place__paragraph {
-        margin: 32px auto 25px;
+        margin-left: 0;
         font-size: 16px;
         line-height: 163%;
+    }
+
+    .cover {
+        min-height: 200px;
+    }
+
+    .cover__link {
+        min-height: 200px;
+    }
+
+    .cover__title {
+        font-size: 32px;
+        line-height: 35px;
+        max-width: 288px;
+    }
+
+    .cover__subtitle {
+        font-size: 14px;
+        line-height: 16px;
+        max-width: 288px;
+    }
+
+    .footer {
+        margin: 0 16px;
+        padding: 64px 0 24px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer__link {
+        margin-bottom: 32px;
+        display: flex;
+        font-size: 24px;
+        line-height: 24px;
+        /* identical to box height, or 112% */
+        transition: ease-in-out 0.3s;
+    }
+
+    .footer__link:last-child {
+        margin-bottom: 48px;
+    }
+
+    .footer__copyright {
+        margin: 0;
+        font-size: 14px;
+        line-height: 14px;
+        /* identical to box height, or 114% */
     }
 }
