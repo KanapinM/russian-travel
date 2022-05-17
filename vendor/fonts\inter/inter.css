@@ -9,11 +9,11 @@
 
 @font-face {
   font-family: 'Inter';
-  font-style: normal;
+  font-style:  normal;
   font-weight: 700;
   font-display: swap;
-  src: url('../fonts\inter/Inter-ExtraBold.woff2') format("woff2"),
-      url('../fonts\inter/Inter-ExtraBold.woff') format("woff");
+  src: url("../fonts\inter/Inter-Bold.woff2") format("woff2"),
+       url("../fonts\inter/Inter-Bold.woff") format("woff");
 }
 
 @font-face {
