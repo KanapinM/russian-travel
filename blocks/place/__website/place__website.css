@@ -6,6 +6,7 @@
 @media screen and (max-width: 767px) {
     .place__website {
         margin: auto;
+        margin-bottom: 32px;
         width: 288px;
     }
 }

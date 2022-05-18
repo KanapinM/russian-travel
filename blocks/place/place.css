@@ -47,3 +47,10 @@
         column-gap: 28px;
     }
 }
+
+@media screen and (max-width: 767px) {
+    .place {
+        margin: 0 auto 50px;
+        gap: 0;
+    }
+}

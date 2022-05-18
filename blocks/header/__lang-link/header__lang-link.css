@@ -1,5 +1,6 @@
 .header__lang-link {
     margin-right: 18px;
+    text-decoration: none;
     color: white;
     font-family: 'Inter', Arial, sans-serif;
     font-style: normal;
@@ -16,7 +17,6 @@
 
 .header__lang-link:last-child {
     margin-right: 0;
-    text-decoration: none;
 }
 
 @media screen and (max-width: 767px) {
