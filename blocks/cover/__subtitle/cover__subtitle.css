@@ -8,6 +8,7 @@
     line-height: 22px;
     /* or 122% */
     text-align: center;
+    z-index: 3;
 }
 
 @media screen and (max-width: 767px) {
