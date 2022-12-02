@@ -7,4 +7,4 @@
 Страница спроектирована на html с применением css стилей.
 Поддерживается актуальными браузерами на май 2022 года.
 
-https://kanapinm.github.io/russian-travel/index.html 
+https://kanapinm.github.io/russian-travel/index.html
